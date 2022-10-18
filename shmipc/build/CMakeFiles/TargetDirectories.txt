@@ -1,0 +1,3 @@
+/mnt/g/test/shmipc/build/CMakeFiles/rebuild_cache.dir
+/mnt/g/test/shmipc/build/CMakeFiles/edit_cache.dir
+/mnt/g/test/shmipc/build/CMakeFiles/shmtest.dir

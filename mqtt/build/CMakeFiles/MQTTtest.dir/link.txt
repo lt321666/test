@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/MQTTtest.dir/main.cpp.o  -o MQTTtest   -L/mnt/g/test/mqtt/ib  -Wl,-rpath,/mnt/g/test/mqtt/ib -lwolfmqtt -lpthread 

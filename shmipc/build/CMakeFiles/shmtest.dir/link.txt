@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/shmtest.dir/main.cpp.o  -o shmtest   -L/mnt/g/test/shmipc/shmipc_lib  -Wl,-rpath,/mnt/g/test/shmipc/shmipc_lib -lShmIPCSubApi -lShmIPCPubApi -lpthread 

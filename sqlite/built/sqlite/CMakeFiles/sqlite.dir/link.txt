@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/sqlite.dir/sqlite.cpp.o CMakeFiles/sqlite.dir/__/include/baseSqlite.cpp.o CMakeFiles/sqlite.dir/__/include/palmVeinDb.cpp.o CMakeFiles/sqlite.dir/__/include/palmVeinDbApi.cpp.o  -o sqlite   -L/mnt/g/test/sqlite/lib  -Wl,-rpath,/mnt/g/test/sqlite/lib: -lpthread -ldl -lsqlite3 

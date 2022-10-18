@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../shmipc_include/mv_ipc_operator.h
+memory
+-
+string
+-
+functional
+-
+
+/mnt/g/test/shmipc/main.cpp
+iostream
+-
+mv_ipc_operator.h
+-
+stdio.h
+-
+stdlib.h
+-
+chrono
+-
+iostream
+-
+thread
+-
+mutex
+-
+condition_variable
+-
+

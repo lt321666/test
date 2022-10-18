@@ -1,0 +1,18 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.8)
+project(mv5g_logger)
+
+# RK3568 need standard 17
+set(CMAKE_CXX_STANDARD 17)
+# SET TRUE IF NEED TO BUILD EXAMPLE OR FALSE
+set(EXAMPLE_REQUIRED TRUE)
+
+set(LIB_VERSION 0.0.1)
+set(LIB_SOVERSION 0)
+
+add_subdirectory(src)
+
+if(EXAMPLE_REQUIRED)
+    add_subdirectory(example)
+endif()
+
+set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/target)

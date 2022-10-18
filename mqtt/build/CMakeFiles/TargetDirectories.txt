@@ -1,0 +1,3 @@
+/mnt/g/test/mqtt/build/CMakeFiles/rebuild_cache.dir
+/mnt/g/test/mqtt/build/CMakeFiles/edit_cache.dir
+/mnt/g/test/mqtt/build/CMakeFiles/MQTTtest.dir

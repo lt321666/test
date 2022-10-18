@@ -1,0 +1,13 @@
+/mnt/g/test/sqlite/built/CMakeFiles/install/strip.dir
+/mnt/g/test/sqlite/built/CMakeFiles/install/local.dir
+/mnt/g/test/sqlite/built/CMakeFiles/install.dir
+/mnt/g/test/sqlite/built/CMakeFiles/list_install_components.dir
+/mnt/g/test/sqlite/built/CMakeFiles/rebuild_cache.dir
+/mnt/g/test/sqlite/built/CMakeFiles/edit_cache.dir
+/mnt/g/test/sqlite/built/sqlite/CMakeFiles/install/strip.dir
+/mnt/g/test/sqlite/built/sqlite/CMakeFiles/install/local.dir
+/mnt/g/test/sqlite/built/sqlite/CMakeFiles/install.dir
+/mnt/g/test/sqlite/built/sqlite/CMakeFiles/list_install_components.dir
+/mnt/g/test/sqlite/built/sqlite/CMakeFiles/rebuild_cache.dir
+/mnt/g/test/sqlite/built/sqlite/CMakeFiles/edit_cache.dir
+/mnt/g/test/sqlite/built/sqlite/CMakeFiles/sqlite.dir
