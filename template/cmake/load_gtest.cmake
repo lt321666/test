@@ -1,0 +1,34 @@
+﻿# Once done, this will define
+#
+# GTEST_INCLUDE_DIR - theGTEST include directory
+# GTEST_LIBRARY_DIR - theGTEST library directory
+# GTEST_LIBS - link these to useGTEST
+#
+#  ......
+
+MACRO(LOAD_LIBGTEST os arch)
+    MESSAGE(INFO "--------------------------------")
+    SET(3RDPARTY_DIR ${PROJECT_SOURCE_DIR}/3rdparty/target/${${os}}_${${arch}})
+    MESSAGE(STATUS "3RDPARTY_DIR: ${3RDPARTY_DIR}")
+    #FIND_FILE(GTEST_INCLUDE_DIR include ${3RDPARTY_DIR} NO_DEFAULT_PATH)
+    #FIND_FILE(GTEST_LIBRARY_DIR lib ${3RDPARTY_DIR} NO_DEFAULT_PATH)
+    SET(GTEST_INCLUDE_DIR ${3RDPARTY_DIR}/include)
+    SET(GTEST_LIBRARY_DIR ${3RDPARTY_DIR}/lib)
+
+    IF (CMAKE_SYSTEM_NAME MATCHES "Linux")
+        SET(GTEST_LIBS gmock gtest pthread)
+    ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Windows")
+       SET(GTEST_LIBS gmock gtest pthread)
+    ENDIF (CMAKE_SYSTEM_NAME MATCHES "Linux")
+
+    IF(GTEST_INCLUDE_DIR)
+        SET(GTEST_LIBRARY_DIR "${GTEST_LIBRARY_DIR}/gtest")
+        #SET(GTEST_LIBS "${GTEST_LIBRARY_DIR}/libgtest.a")
+        #SET(GTEST_LIBS "${GTEST_LIBRARY_DIR}/libGTEST.so")
+        MESSAGE(STATUS "GTEST_INCLUDE_DIR : ${GTEST_INCLUDE_DIR}")
+        MESSAGE(STATUS "GTEST_LIBRARY_DIR : ${GTEST_LIBRARY_DIR}")
+        MESSAGE(STATUS "GTEST_LIBS : ${GTEST_LIBS}")
+    ELSE()
+        MESSAGE(FATAL_ERROR "libGTEST not found!")
+    ENDIF()
+ENDMACRO()

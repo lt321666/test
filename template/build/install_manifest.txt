@@ -1,0 +1,2 @@
+/mnt/g/test/template/target/bin/demo_template
+/mnt/g/test/template/target/bin/testAPP

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <title>项目组件结构</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #content-info{
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #author-info{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        #title{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-top: 10px;
+            margin-bottom: 2px;
+            font-size: 34px;
+            color: #505050;
+        }
+        .text{
+            white-space:nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 2px;
+            font-size: 20px;
+            color: #8c8c8c;
+        }
+        #navBar{
+            position: fixed;
+            right:0;
+            bottom: 0;
+            background-color: #f0f3f4;
+            overflow-y: auto;
+            text-align: center;
+        }
+        #svg-container{
+            width: 100%;
+            min-width: 0;
+            margin: 0 10px;
+        }
+        #nav-thumbs{
+            padding: 0 5px;
+        }
+        .nav-thumb{
+            position: relative;
+            margin: 10px auto;
+        }
+        .nav-thumb >p{
+            text-align: center;
+            font-size: 12px;
+            margin: 4px 0 0 0;
+        }
+        .nav-thumb >div{
+            position: relative;
+            display: inline-block;
+            border: 1px solid #c6cfd5;
+        }
+        .nav-thumb img{
+            display: block;
+        }
+        .nav-thumb span{
+            pointer-events: none;
+        }
+        #main-content{
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #d0cfd8;
+            display: flex;
+            height: auto;
+            flex-flow: row wrap;
+            text-align:center;
+        }
+        #svg-container >svg{
+            display: block;
+            margin:10px auto;
+            margin-bottom: 0;
+        }
+        #copyright{
+            bottom: 0;
+            left: 50%;
+            margin: 5px auto;
+            font-size: 16px;
+            color: #515151;
+        }
+        #copyright >a{
+            text-decoration: none;
+            color: #77C;
+        }
+        .number{
+            position: absolute;
+            top:0;
+            left:0;
+            border-top:22px solid #76838f;
+            border-right: 22px solid transparent;
+        }
+        .pagenum{
+            font-size: 12px;
+            color: #fff;
+            position: absolute;
+            top: -23px;
+            left: 2px;
+        }
+        #navBar::-webkit-scrollbar{
+            width: 8px;
+            background-color: #f5f5f5;
+        }
+        #navBar::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        #navBar::-webkit-scrollbar-thumb{
+            border-radius: 8px;
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            background-color: #6b6b70;
+        }
+        #navBar::-webkit-scrollbar-thumb:hover{
+            background-color: #4a4a4f;
+        }
+        .nav-thumb >div:hover{
+            box-shadow:1px 1px 4px rgba(0,0,0,.4);
+        }
+        .selected .number{
+            border-color: #08a1ef transparent;
+        }
+</style>
+  </head>
+  <body>
+    <div id="main-area">
+      <div id="content-info">
+        <div id="title">项目组件结构</div>
+        <div id="author-info">
+          <div id="author-name" class="text">蒙克雨</div>
+          <div id="share-time" class="text">2022-02-09</div>
+        </div>
+      </div>
+      <div id="main-content">
+        <div id="svg-container"><svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" id="page1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1122" viewBox="0 0 1123 2381" preserveAspectRadio="xMinYMin meet" height="2381"><defs/><rect x="0" width="1123" y="0" fill="#ffffff" stroke="#808080" height="2381"/><g id="group1" transform="translate(57.00,132.00)"><path stroke-width="1" id="shape2" fill="#b0b4df" stroke="#101843" d="M11.0,.0L417.7,.0C423.8,.0,428.7,4.9,428.7,11.0L428.7,395.3C428.7,401.4,423.8,406.3,417.7,406.3L11.0,406.3C4.9,406.3,.0,401.4,.0,395.3L.0,11.0C.0,4.9,4.9,.0,11.0,.0z" fill-rule="nonzero"/></g><g id="shape3" transform="translate(92.06,148.26)"><text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei UI;font-size:9.00pt"><tspan x="4.4" y="21.5">.例子 palmVein掌静脉组件包 </tspan><tspan x="4.4" y="38.5">├── bin_pack   # 打包目录 </tspan><tspan x="4.4" y="55.5">├── fun_modle # 第三方库源码依赖和库依赖存放位置 </tspan><tspan x="4.4" y="72.5">│     ├── dbserver # 子模块组件 </tspan><tspan x="4.4" y="89.5">│     ├── http_daemon           </tspan><tspan x="4.4" y="106.5">│     ├── ipc-daemon           </tspan><tspan x="4.4" y="123.5">│     ├── ipcweb-backend       </tspan><tspan x="4.4" y="140.5">│     ├── mqtt_daemon           </tspan><tspan x="4.4" y="157.5">│     ├── netserver                   </tspan><tspan x="4.4" y="174.5">│     ├── upgrade_server       </tspan><tspan x="4.4" y="191.5">│     └── netserver</tspan><tspan x="4.4" y="208.5">├── scripts # 存放工作脚本 </tspan><tspan x="4.4" y="225.5">│     ├── scripts_config # 配置文件 需要拷贝到 /home/ </tspan><tspan x="4.4" y="242.5">│            ├── build.sh # 编译 </tspan><tspan x="4.4" y="259.5">│            └── update_all_mudmole.sh # 更新子模块 </tspan><tspan x="4.4" y="276.5">│     ├── conf # 基础组件脚本 配置目录</tspan><tspan x="4.4" y="293.5">│            ├── base_conf.sh   # 配置文件 </tspan><tspan x="4.4" y="310.5">│            └── version.hpp.in # 版本控制模板文件 </tspan><tspan x="4.4" y="327.5">│     └── task.sh # 一键清理/编译/安装/打包/部署工作流 </tspan><tspan x="4.4" y="344.5">├── .env #默认项目配置文件 </tspan><tspan x="4.4" y="361.5">├── .gitignore </tspan><tspan x="4.4" y="378.5">├── .gitmodules</tspan></text></g><g id="group4" transform="translate(648.26,9.30)"><path stroke-width="1" id="shape5" fill="#b0b4df" stroke="#101843" d="M11.0,.0L417.7,.0C423.8,.0,428.7,4.9,428.7,11.0L428.7,1688.0C428.7,1694.1,423.8,1699.0,417.7,1699.0L11.0,1699.0C4.9,1699.0,.0,1694.1,.0,1688.0L.0,11.0C.0,4.9,4.9,.0,11.0,.0z" fill-rule="nonzero"/></g><g id="shape6" transform="translate(670.76,17.80)"><text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei UI;font-size:9.00pt"><tspan x="4.4" y="21.0">.例子 upgrade_server组件 </tspan><tspan x="4.4" y="38.0">├── 3rdparty # 第三方库源码依赖和库依赖存放位置 </tspan><tspan x="4.4" y="55.0">│     ├── CMakeLists.txt # 第三方库源码依赖编译CMakeLists文件 </tspan><tspan x="4.4" y="72.0">│     ├── libIPCProtocol # 源码依赖libIPCProtocol 组件结构 </tspan><tspan x="4.4" y="89.0">│     └── target # 库依赖存放目录 </tspan><tspan x="4.4" y="106.0">│            ├── linux_armv7-a # 以平台和架构命名区分 </tspan><tspan x="4.4" y="123.0">│                   ├── include # 头文件存放目录 </tspan><tspan x="4.4" y="140.0">│                   └── lib # 库文件存放目录 </tspan><tspan x="4.4" y="157.0">│            ├── linux_x86-64 </tspan><tspan x="4.4" y="174.0">│                   ├── include </tspan><tspan x="4.4" y="191.0">│                   └── lib </tspan><tspan x="4.4" y="208.0">│            └── windows_x86-64 </tspan><tspan x="4.4" y="225.0">│                   ├── include </tspan><tspan x="4.4" y="242.0">│                   └── lib </tspan><tspan x="4.4" y="259.0">├── bin # 存放项目make install后的文件 </tspan><tspan x="4.4" y="276.0">│     ├── linux_armv7-a_Release </tspan><tspan x="4.4" y="293.0">│            ├── include # 存放头文件 </tspan><tspan x="4.4" y="310.0">│            ├── bin # 存放可执行文件 </tspan><tspan x="4.4" y="327.0">│            └── lib # 存放库文件 </tspan><tspan x="4.4" y="344.0">│     └── linux_armv7-a_Debug </tspan><tspan x="4.4" y="361.0">│            ├── include # 存放头文件 </tspan><tspan x="4.4" y="378.0">│            ├── bin # 存放可执行文件 </tspan><tspan x="4.4" y="395.0">│            └── lib # 存放库文件 </tspan><tspan x="4.4" y="412.0">├── build # 存放项目编译文件 </tspan><tspan x="4.4" y="429.0">├── cmake # 存放项目相关的cmake工具 </tspan><tspan x="4.4" y="446.0">│     ├── load_curl.cmake # 依赖库配置文件 </tspan><tspan x="4.4" y="463.0">│     ├── load_gtest.cmake </tspan><tspan x="4.4" y="480.0">│     ├── load_jsonc.cmake </tspan><tspan x="4.4" y="497.0">│     ├── load_jsoncpp.cmake </tspan><tspan x="4.4" y="514.0">│     ├── load_libcryptopp.cmake </tspan><tspan x="4.4" y="531.0">│     ├── load_libemb.cmake </tspan><tspan x="4.4" y="548.0">│     ├── load_libIPCProtocol.cmake </tspan><tspan x="4.4" y="565.0">│     ├── load_libzip.cmake </tspan><tspan x="4.4" y="582.0">│     ├── load_spdlog.cmake </tspan><tspan x="4.4" y="599.0">│     ├── messagecolor.cmake # 彩色消息输出 </tspan><tspan x="4.4" y="616.0">│     ├── toolchain_options.cmake # 编译配置项 </tspan><tspan x="4.4" y="633.0">│     └── utils.cmake # 版本管理组件 </tspan><tspan x="4.4" y="650.0">├── conf # 项目配置文件存放目录 </tspan><tspan x="4.4" y="667.0">│     ├── dbus # 配置文件 </tspan><tspan x="4.4" y="684.0">│            └── upserver.conf </tspan><tspan x="4.4" y="701.0">│     ├── other_data.db.20220105 # 数据库文件</tspan><tspan x="4.4" y="718.0">│     └── README.md # 项目说明 </tspan><tspan x="4.4" y="735.0">├── doc # 项目文档存放目录 </tspan><tspan x="4.4" y="752.0">├── platforms # 项目平台性相关内容存放目录，包括交叉编译 </tspan><tspan x="4.4" y="769.0">│     ├── linux </tspan><tspan x="4.4" y="786.0">│            ├── rv1126-toolchain-bbd.cmake # 交叉编译工具链 </tspan><tspan x="4.4" y="803.0">│            ├── rv1126-toolchain-mky.cmake # 交叉编译工具链 </tspan><tspan x="4.4" y="820.0">│     └── arm.himix200.cmake </tspan><tspan x="4.4" y="837.0">├── scripts # 相关脚本存放目录，包括持续集成和部署相关 </tspan><tspan x="4.4" y="854.0">│     ├── base_scripts # 基础组件脚本 </tspan><tspan x="4.4" y="871.0">│            ├── build.sh # 编译 </tspan><tspan x="4.4" y="888.0">│            ├── clean.sh # 清理 </tspan><tspan x="4.4" y="905.0">│            ├── dos2unix.sh # win2linux </tspan><tspan x="4.4" y="922.0">│            ├── login.sh # 登录 </tspan><tspan x="4.4" y="939.0">│            ├── pack.sh # 打包 默认输出到根目录 pack目录 </tspan><tspan x="4.4" y="956.0">│            ├── remote_install.sh # 自动部署 </tspan><tspan x="4.4" y="973.0">│            └── update_all_mudmole.sh # 更新 </tspan><tspan x="4.4" y="990.0">│     ├── conf # 基础组件脚本 配置目录</tspan><tspan x="4.4" y="1007.0">│            ├── base_conf.sh   # 配置文件 </tspan><tspan x="4.4" y="1024.0">│            └── version.hpp.in # 版本控制模板文件 </tspan><tspan x="4.4" y="1041.0">│     └── task.sh # 一键清理/编译/安装/打包/部署工作流 </tspan><tspan x="4.4" y="1058.0">├── src # 项目源码目录 </tspan><tspan x="4.4" y="1075.0">│     ├── UpgradeServer # 以文件夹分割/物理隔离各模块代码 </tspan><tspan x="4.4" y="1092.0">│            ├── AesMgr </tspan><tspan x="4.4" y="1109.0">│                   ├── aes_mgr.cpp </tspan><tspan x="4.4" y="1126.0">│                   ├── aes_mgr.h </tspan><tspan x="4.4" y="1143.0">│                   ├── aes_pre.h </tspan><tspan x="4.4" y="1160.0">│                   └── aes_transfer.h </tspan><tspan x="4.4" y="1177.0">│            ├── BuilderPattern </tspan><tspan x="4.4" y="1194.0">│            ├── Common # 公共 </tspan><tspan x="4.4" y="1211.0">│                   ├── common.hpp # 公共头 </tspan><tspan x="4.4" y="1228.0">│                   └── version.hpp   # 版本管理 </tspan><tspan x="4.4" y="1245.0">│            ├── CurlMgr </tspan><tspan x="4.4" y="1262.0">│            ├── DbusMgr </tspan><tspan x="4.4" y="1279.0">│            ├── FaceTerminalBuilder </tspan><tspan x="4.4" y="1296.0">│            ├── logger # 日志和崩溃诊断</tspan><tspan x="4.4" y="1313.0">│            ├── Main </tspan><tspan x="4.4" y="1330.0">│            ├── Md5Mgr </tspan><tspan x="4.4" y="1347.0">│            ├── MemTrack # 内存管理 </tspan><tspan x="4.4" y="1364.0">│            ├── RoutMgr    # 消息路由 </tspan><tspan x="4.4" y="1381.0">│            ├── RsaMgr </tspan><tspan x="4.4" y="1398.0">│            ├── ThreadPoolMgr </tspan><tspan x="4.4" y="1415.0">│            ├── UpgradeMgr </tspan><tspan x="4.4" y="1432.0">│            ├── ZipMgr </tspan><tspan x="4.4" y="1449.0">│            └── CMakeLists.txt </tspan><tspan x="4.4" y="1466.0">│            ├── CMakeLists.txt </tspan><tspan x="4.4" y="1483.0">└── tests # 测试示例源码存放目录 </tspan><tspan x="4.4" y="1500.0">│     ├── fixture # 测试夹层套件 </tspan><tspan x="4.4" y="1517.0">│     ├── global </tspan><tspan x="4.4" y="1534.0">│     ├── test_case </tspan><tspan x="4.4" y="1551.0">│     ├── test_func </tspan><tspan x="4.4" y="1568.0">│     └── main.cpp </tspan><tspan x="4.4" y="1585.0">├── CMakeLists.txt </tspan><tspan x="4.4" y="1602.0">├── .env #默认项目配置文件 </tspan><tspan x="4.4" y="1619.0">├── .gitignore  </tspan><tspan x="4.4" y="1636.0">├── .gitmodules # git子模块配置 </tspan><tspan x="4.4" y="1653.0">├── CMakeLists.txt # 项目根目录CMakeLists文件，cmake入口文</tspan><tspan x="4.4" y="1670.0">件 </tspan><tspan x="4.4" y="1687.0">└── CMakeSettings.json # vs 远程开发配置 </tspan></text></g><g id="shape7" transform="translate(27.26,9.30)"><text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan x="8.4" y="23.1">组件式开发结构研究</tspan></text></g><g id="shape8" transform="translate(59.13,43.30)"><text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan x="4.8" y="19.5">这里引入组件和组件包的概念，以掌静脉项目为例</tspan></text></g><g id="shape9" transform="translate(189.00,132.00)"><text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan x="27.5" y="23.0">组件包样例</tspan></text></g><g id="shape10" transform="translate(811.76,9.30)"><text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei UI;font-size:9.00pt"><tspan x="4.0" y="19.0">组件样例</tspan></text></g><g id="shape11" transform="translate(54.13,59.45)"><text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan x="8.9" y="32.3">组件的特点包括：1.可独立编译2.携带基础脚本3.独立git仓库4.可被组装</tspan></text></g><g id="shape12" transform="translate(55.00,98.12)"><text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan x="8.4" y="23.0">组件包特点包括：1.各组件互不影响2.主要用于发布程序</tspan></text></g><g id="group13" transform="translate(57.00,695.00)"><path stroke-width="1" id="shape14" fill="#b0b4df" stroke="#101843" d="M11.0,.0L513.0,.0C519.1,.0,524.0,4.9,524.0,11.0L524.0,447.0C524.0,453.1,519.1,458.0,513.0,458.0L11.0,458.0C4.9,458.0,.0,453.1,.0,447.0L.0,11.0C.0,4.9,4.9,.0,11.0,.0z" fill-rule="nonzero"/></g><g id="shape15" transform="translate(106.43,713.84)"><text xml:space="preserve" style="fill:#191919;font-family:Microsoft YaHei UI;font-size:9.00pt"><tspan x="4.3" y="38.5">.例子 .env配置文件</tspan><tspan x="4.3" y="55.5">      [pro]</tspan><tspan x="4.3" y="72.5">             pro_name=HelloApp //组件名称</tspan><tspan x="4.3" y="89.5">      [conf]</tspan><tspan x="4.3" y="106.5">             custom_profile=default //自定义配置路径默认default不生效</tspan><tspan x="4.3" y="123.5">      [user]</tspan><tspan x="4.3" y="140.5">             ip_address=192.168.30.215//远程部署ip地址</tspan><tspan x="4.3" y="157.5">             user_name=root//用户名</tspan><tspan x="4.3" y="174.5">             user_password=rockchip//密码</tspan><tspan x="4.3" y="191.5">      [pack]</tspan><tspan x="4.3" y="208.5">             pack_path=installation_package //自定义打包地址</tspan><tspan x="4.3" y="225.5">      [build]</tspan><tspan x="4.3" y="242.5">             build_type=Release //编译debug/relese</tspan><tspan x="4.3" y="259.5">             build_tests=OFF //是否开启集成测试</tspan><tspan x="4.3" y="276.5">      [vers]</tspan><tspan x="4.3" y="293.5">             ver_major=1 //主版本号</tspan><tspan x="4.3" y="310.5">             ver_minor=0 //次版本号</tspan><tspan x="4.3" y="327.5">             ver_patch=1 //修正</tspan><tspan x="4.3" y="344.5">             ver_cycle=a //开发阶段</tspan><tspan x="4.3" y="361.5">     [book]</tspan><tspan x="4.3" y="378.5">             author=mky //组件作者</tspan><tspan x="4.3" y="395.5">             email=1477400876@qq.com //通讯</tspan></text></g><g id="shape16" transform="translate(191.26,692.05)"><text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan x="21.0" y="23.0">配置文件示例</tspan></text></g></svg></div>
+        <div id="copyright">以上内容仅代表作者本人观点，不代表亿图图示立场。</div>
+      </div>
+      <div id="navBar">
+        <div id="nav-thumbs">
+          <div class="nav-thumb">
+            <div>
+              <span class="number">
+                <span class="pagenum">1</span>
+              </span>
+              <a href="#page1">
+                <img src="data:image/png;base64,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"/>
+              </a>
+            </div>
+            <p>页-1</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        const svgs=document.getElementById("svg-container").children;
+        const UA=window.navigator.userAgent;
+        const ua=(UA.indexOf('rv:11')+UA.indexOf('Firefox'))>=0;
+        const svgcount=document.getElementById('svg-container').childElementCount;
+        var styleArr=[];
+        var heightArr=[];
+        var navBar=document.getElementById('navBar');
+        var conInfo=document.getElementById('content-info');
+        for(var i=0;i<svgcount;i++){
+            styleArr[i] = {width:svgs[i].getAttribute('width'),height:svgs[i].getAttribute('height')}
+        }
+        window.onresize=function () {
+            renavstyle();
+            resvgstyle();
+        };
+        window.onscroll=renavstyle;
+        window.onload=function () {
+            renavstyle();
+            var sideWidth=navBar.offsetWidth;
+            document.getElementById('content-info').style.marginRight=sideWidth+'px';
+            document.getElementById('main-content').style.marginRight=sideWidth+'px';
+            resvgstyle();
+            doscroll();
+        };
+        function recontainstyle() {
+            var topHeight=conInfo.clientHeight;
+            var svgHeight=0;
+            for(var i=0;i<svgcount;i++){
+                heightArr[i]=svgs[i].getBoundingClientRect().height+10;
+                svgHeight+=svgs[i].clientHeight ||svgs[i].getBoundingClientRect().height;
+            }
+            var fullHeight=svgHeight+Number(topHeight);
+            if(fullHeight<window.innerHeight){
+            document.getElementById('copyright').style.position='absolute';
+            document.getElementById('copyright').style.transform ='translateX(-50%)';
+            document.getElementById('main-content').style.position='absolute';
+            document.getElementById('main-content').style.top=topHeight+'px';
+        }else{
+            document.getElementById('copyright').style.position='';
+            document.getElementById('copyright').style.transform ='';
+            document.getElementById('main-content').style.position='';
+        }
+        }
+        function resvgstyle() {
+            var sideWidth=navBar.offsetWidth+20;
+            for(var i=0;i<svgcount;i++){
+                var oriWidth = styleArr[i].width;
+                var oriHeight = styleArr[i].height;
+                var percent = oriHeight / oriWidth;
+                var innerWidth=document.body.offsetWidth-sideWidth;
+                if (innerWidth <= oriWidth) {
+                    svgs[i].removeAttribute('width');
+                    svgs[i].removeAttribute('height');
+                    if (ua) {
+                        svgs[i].setAttribute('height',innerWidth*percent);
+                    }
+                }else {
+                    svgs[i].setAttribute('width', oriWidth);
+                    svgs[i].setAttribute('height', oriHeight);
+                }
+            }
+            recontainstyle();
+        }
+        function renavstyle() {
+            var topHeight=conInfo.clientHeight;
+            var scrollTop=document.body.scrollTop||document.documentElement.scrollTop;
+            if(scrollTop>topHeight){
+                document.getElementById('navBar').style.top=0+'px';
+            }else{
+                document.getElementById('navBar').style.top=topHeight-scrollTop+'px';
+            }
+            doscroll();
+        }
+        function doscroll() {
+            var topHeight=conInfo.clientHeight;
+            var scrollTop=document.body.scrollTop||document.documentElement.scrollTop;
+            for(var i=0;i<svgcount;i++){
+                var sum=0;
+                for(var j=0;j<=i;j++){
+                    sum+=heightArr[j];
+                }
+                if(scrollTop+window.innerHeight/2-topHeight-sum<0){
+                    var sub=Number(i)+1;
+                    if(document.querySelector('#nav-thumbs .selected')){
+                        document.querySelector('#nav-thumbs .selected').classList.remove('selected');
+                    }
+                    if(document.querySelector('.nav-thumb:nth-of-type('+sub+')')){
+                        document.querySelector('.nav-thumb:nth-of-type('+sub+')').classList.add('selected');
+                    }
+                    break;
+                }
+            }
+        }
+        var navs=document.querySelectorAll('.nav-thumb');
+        for(i=0;i<navs.length;i++){
+            navs[i].children[0].onclick=function () {
+                document.querySelector('#nav-thumbs .selected').classList.remove('selected');
+                this.parentNode.classList.add('selected');
+            }
+        }
+</script>
+  </body>
+</html>

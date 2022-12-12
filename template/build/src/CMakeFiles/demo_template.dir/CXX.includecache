@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/calculate/calc.h
+
+/mnt/g/test/template/src/main/main.cpp
+iostream
+-
+calc.h
+/mnt/g/test/template/src/main/calc.h
+
+/mnt/g/test/template/src/public/buffer/buffer.cpp
+buffer.h
+/mnt/g/test/template/src/public/buffer/buffer.h
+
+/mnt/g/test/template/src/public/buffer/buffer.h
+queue
+-
+vector
+-
+mutex
+-
+atomic
+-
+functional
+-
+condition_variable
+-
+thread
+-
+unistd.h
+-
+
